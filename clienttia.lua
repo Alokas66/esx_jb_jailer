@@ -2,7 +2,6 @@ local cJ = false
 local IsPlayerUnjailed = false
 
 
---ESX base
 
 Citizen.CreateThread(function()
     while ESX == nil do
